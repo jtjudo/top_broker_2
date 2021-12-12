@@ -1,74 +1,6 @@
 $(document).ready(function () {
-    let currentPage = 1;
-    let s = '';
-
-    $(document).on('click', '.complexes__pagination-arrow-left', function () {
-        if (currentPage > 1) {
-            currentPage = currentPage - 1;
-        }
-        ajaxInputSearch();
-    });
-
-    $(document).on('click', '.complexes__pagination-arrow-right', function () {
-        const pages = $('.complexes__pagination-pages').children().last();
-        let allPages = Number(pages.text())
-        if (currentPage < allPages) {
-            currentPage = currentPage + 1;
-        }
-        ajaxInputSearch();
-    });
-
-    $(document).on('click', '.pages-number ', function (item) {
-
-        const numberPage = Number(this.textContent);
-        currentPage = numberPage;
-
-        ajaxInputSearch();
-    });
-
-    let timer;
-
-
-    $(document).on('keyup', '.search-complexes-input', function (item) {
-        if (timer !== null) {
-            clearTimeout(timer);
-        }
-
-        function searchValue() {
-            let input = $('.search-complexes-input');
-
-            if (input.val().length > 2) {
-                s = input.val();
-            } else {
-                s = '';
-            }
-
-            ajaxInputSearch();
-        }
-
-        timer = setTimeout(searchValue, 300);
-    });
-
 
     $('input[type="tel"]').mask("+9 (999) 999-9999");
-
-    function ajaxInputSearch() {
-        return $.ajax({
-            type: 'POST',
-            url: ajax.ajaxurl,
-            data: {
-                action: 'complexAjax',
-                page_num: currentPage,
-                s: s,
-            },
-            success: function (res) {
-                $('.complexes__block-wrapper').html(res);
-            }
-        })
-    }
-
-    ajaxInputSearch();
-
 
     $('#get-buy input[type="submit"]').click(function () {
         ym(85675426, 'reachGoal', 'forma1');
@@ -83,26 +15,49 @@ $(document).ready(function () {
         ym(85675426, 'reachGoal', 'forma5');
     })
 
-    $('.layout-form-btn.back').click(function () {
+    $('.btn-back').click(function () {
         parent.Fancybox.close()
     })
 
+    const buttons = document.querySelectorAll('.complexes__block-btn');
+
+    if (buttons !== null) {
+        buttons.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const key = btn.getAttribute('data-key');
+
+                new Swiper(`.swiper-images-${key}`, {
+                    loop: true,
+                    slidesPerView: 'auto',
+                    centeredSlides: true,
+                    effect: 'fade',
+                    speed: 500,
+
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                });
+            })
+        })
+    }
+
+    const btnQuestions = document.querySelectorAll('.questions-content-question')
+
+
+    btnQuestions.forEach((btnQuestion) => {
+        const answer = btnQuestion.querySelector('.questions-content-answer')
+        btnQuestion.addEventListener('click', () => {
+            if (answer.classList.contains('active-answer')) {
+                answer.classList.remove('active-answer')
+            } else {
+                btnQuestions.forEach((btnQuestion) => {
+                    const answer = btnQuestion.querySelector('.questions-content-answer')
+                    answer.classList.remove('active-answer')
+                })
+                answer.classList.add('active-answer')
+            }
+        })
+    })
 });
 
-const btnQuestions = document.querySelectorAll('.questions-content-question')
-
-
-btnQuestions.forEach((btnQuestion) => {
-    const answer = btnQuestion.querySelector('.questions-content-answer')
-    btnQuestion.addEventListener('click', () => {
-        if (answer.classList.contains('active-answer')) {
-            answer.classList.remove('active-answer')
-        } else {
-            btnQuestions.forEach((btnQuestion) => {
-                const answer = btnQuestion.querySelector('.questions-content-answer')
-                answer.classList.remove('active-answer')
-            })
-            answer.classList.add('active-answer')
-        }
-    })
-})

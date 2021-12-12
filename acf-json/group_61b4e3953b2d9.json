@@ -1,11 +1,11 @@
 {
-    "key": "group_614dcd4168e49",
-    "title": "Атрибуты жилого комплекса",
+    "key": "group_61b4e3953b2d9",
+    "title": "Подарок при покупке",
     "fields": [
         {
-            "key": "field_6148636ec8be0",
+            "key": "field_61b4e3a90aa75",
             "label": "Фоновая картинка",
-            "name": "complexes_background_image_item",
+            "name": "present_background_image",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -27,9 +27,9 @@
             "mime_types": ""
         },
         {
-            "key": "field_614373b7684aa",
-            "label": "Застройщик",
-            "name": "name_group",
+            "key": "field_61b4e40f0aa76",
+            "label": "Подзаголовок",
+            "name": "present_subheadline",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -46,9 +46,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_6143741e684ac",
-            "label": "Район",
-            "name": "region",
+            "key": "field_61b4e4b20aa77",
+            "label": "Заголовок",
+            "name": "present_headline",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -65,9 +65,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_61437457684ae",
-            "label": "Цена",
-            "name": "price",
+            "key": "field_61b4e4d40aa79",
+            "label": "Кнопка",
+            "name": "present_btn",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -84,10 +84,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_6143743e684ad",
-            "label": "Год сдачи",
-            "name": "year_of_completion",
-            "type": "text",
+            "key": "field_61b4e4c60aa78",
+            "label": "Текст",
+            "name": "present_text",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -98,67 +98,21 @@
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_614dcf3ce27cb",
-            "label": "Описание",
-            "name": "description",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_614efcacb43c0",
-            "label": "Картинки в описании",
-            "name": "images_description",
-            "type": "gallery",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "insert": "append",
-            "library": "all",
-            "min": "",
-            "max": "",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page",
                 "operator": "==",
-                "value": "complexes"
+                "value": "5"
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 6,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -166,5 +120,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632610592
+    "modified": 1639324747
 }
