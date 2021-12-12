@@ -9,6 +9,8 @@ get_header();
   include 'blocks/purchase.php';
   include 'blocks/advantage.php';
   include 'blocks/form.php';
+  include 'blocks/questions.php';
+
   ?>
 </main>
 <?php get_footer(); ?>

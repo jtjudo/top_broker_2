@@ -50,7 +50,6 @@ $(document).ready(function () {
     });
 
 
-
     $('input[type="tel"]').mask("+9 (999) 999-9999");
 
     function ajaxInputSearch() {
@@ -90,3 +89,20 @@ $(document).ready(function () {
 
 });
 
+const btnQuestions = document.querySelectorAll('.questions-content-question')
+
+
+btnQuestions.forEach((btnQuestion) => {
+    const answer = btnQuestion.querySelector('.questions-content-answer')
+    btnQuestion.addEventListener('click', () => {
+        if (answer.classList.contains('active-answer')) {
+            answer.classList.remove('active-answer')
+        } else {
+            btnQuestions.forEach((btnQuestion) => {
+                const answer = btnQuestion.querySelector('.questions-content-answer')
+                answer.classList.remove('active-answer')
+            })
+            answer.classList.add('active-answer')
+        }
+    })
+})

@@ -1,5 +1,6 @@
 @import url(../fonts/Blacker_Sans_Text/stylesheet.css);
 @import url(../fonts/Gilroy/stylesheet.css);
+@import "questions.css";
 
 html,
 body,
