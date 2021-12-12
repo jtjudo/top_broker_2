@@ -3,82 +3,6 @@
     "title": "Время инвестировать безопасно",
     "fields": [
         {
-            "key": "field_6143658edacb9",
-            "label": "Заголовок",
-            "name": "investments_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_614365bedacba",
-            "label": "Подзаголовок",
-            "name": "investments_subtitle",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_614365cfdacbb",
-            "label": "Текст",
-            "name": "investments_text",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_614365eedacbc",
-            "label": "Текст теста",
-            "name": "investments_text_test",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_61436615dacbd",
             "label": "Картинка",
             "name": "investments_image",
@@ -101,6 +25,44 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_61b481f7692fd",
+            "label": "Заголовок",
+            "name": "investments_headline",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61b48209692fe",
+            "label": "Кнопка",
+            "name": "investments_button",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -112,7 +74,7 @@
             }
         ]
     ],
-    "menu_order": 2,
+    "menu_order": 3,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -120,5 +82,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631807476
+    "modified": 1639324711
 }
