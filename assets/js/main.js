@@ -41,5 +41,20 @@ $(document).ready(function () {
             })
         })
     }
+
+    const btnQuestions = document.querySelectorAll('.questions-content-question')
+
+    btnQuestions.forEach((btnQuestion) => {
+        btnQuestion.addEventListener('click', () => {
+            if (btnQuestion.classList.contains('active-answer')) {
+                btnQuestion.classList.remove('active-answer')
+            } else {
+                btnQuestions.forEach((btnQuestion) => {
+                    btnQuestion.classList.remove('active-answer')
+                })
+                btnQuestion.classList.add('active-answer')
+            }
+        })
+    })
 });
 

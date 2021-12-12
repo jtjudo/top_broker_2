@@ -1,5 +1,6 @@
 @import url(../fonts/Blacker_Sans_Text/stylesheet.css);
 @import url(../fonts/Gilroy/stylesheet.css);
+@import "questions.css";
 
 html,
 body,
@@ -1368,7 +1369,75 @@ select:-webkit-autofill:focus {
     margin-bottom: 35px;
 }
 
+.questions {
+    padding: 80px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.questions-headline {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 78px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.questions-content-wrapper {
+    position: relative;
+}
+
+.questions-content-question {
+    background: linear-gradient(90.32deg, #E0B050 17.76%, #CFA34B 42.15%, #6D541E 81.03%);
+    border-radius: 25px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 206.4%;
+    color: #000000;
+    padding: 6px 31px 6px 31px;
+    margin: 6px 0;
+}
+
+.questions-content-answer {
+    background: linear-gradient(180deg, #9B9B9B 0%, #FAFAFA 16.67%, #FFFFFF 100%);
+    border-radius: 25px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 176.9%;
+    color: #000000;
+    padding: 15px 0;
+    position: absolute;
+    display: none;
+    width: 100%;
+}
+
+.questions-content-answer-text {
+    padding: 0 25px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 176.9%;
+}
+
+.active-answer .questions-content-answer {
+    display: block;
+    left: 0;
+    border: 1px solid black;
+}
+
+.questions-content-question:hover {
+    cursor: pointer;
+}
+
 @media (max-width: 1280px) {
+    .questions-headline {
+        font-size: 48px;
+        line-height: 64px;
+    }
 
     .projects_headline h2 {
         font-size: 48px;
@@ -1401,6 +1470,24 @@ select:-webkit-autofill:focus {
 }
 
 @media (max-width: 992px) {
+
+    .questions-content-answer-text {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .questions {
+        padding: 40px 0;
+    }
+
+    .questions-headline {
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    .questions-content-question {
+        font-size: 18px;
+    }
 
     .present__block-subheadline {
         padding: 16px;
@@ -1579,6 +1666,16 @@ select:-webkit-autofill:focus {
 }
 
 @media (max-width: 620px) {
+
+    .questions-headline {
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+    .questions-content-question {
+        font-size: 14px;
+        line-height: 16px;
+    }
 
     .present__block-subheadline h6 {
         font-size: 24px;
