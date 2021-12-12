@@ -44,18 +44,15 @@ $(document).ready(function () {
 
     const btnQuestions = document.querySelectorAll('.questions-content-question')
 
-
     btnQuestions.forEach((btnQuestion) => {
-        const answer = btnQuestion.querySelector('.questions-content-answer')
         btnQuestion.addEventListener('click', () => {
-            if (answer.classList.contains('active-answer')) {
-                answer.classList.remove('active-answer')
+            if (btnQuestion.classList.contains('active-answer')) {
+                btnQuestion.classList.remove('active-answer')
             } else {
                 btnQuestions.forEach((btnQuestion) => {
-                    const answer = btnQuestion.querySelector('.questions-content-answer')
-                    answer.classList.remove('active-answer')
+                    btnQuestion.classList.remove('active-answer')
                 })
-                answer.classList.add('active-answer')
+                btnQuestion.classList.add('active-answer')
             }
         })
     })
