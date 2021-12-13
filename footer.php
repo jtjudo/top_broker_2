@@ -9,13 +9,18 @@ $privacy_policy_text = get_field('privacy_policy_text', 'option');
 $footer_headline = get_field('footer_headline', 'option');
 $сopyright = get_field('сopyright', 'option');
 $privacy_policy_title = get_field('privacy_policy_title', 'option');
+$form_checklist = get_field('form_checklist', 'option');
+
 ?>
 <footer>
+    <div class="layout-form-modal" id="get-buy">
+        <?= $form_checklist ?>
+    </div>
     <div class="container">
         <div class="footer-contact">
             <?php if (!empty($footer_headline)) : ?>
-            <div class="footer-contact-main"> <?= $footer_headline?> </div>
-            <?php endif;?>
+                <div class="footer-contact-main"> <?= $footer_headline ?> </div>
+            <?php endif; ?>
             <div class="footer-contact-info">
                 <?php if (!empty($address)) : ?>
                     <div class="footer-contact-info-address"><?= $address ?></div>
@@ -37,7 +42,7 @@ $privacy_policy_title = get_field('privacy_policy_title', 'option');
                     <?php endif; ?>
                     <?php echo date("Y"); ?>
                     <a href="<?php bloginfo('url'); ?>">Top broker</a>.<br/>
-                    <?= $сopyright ?? ''?>
+                    <?= $сopyright ?? '' ?>
                 </div>
                 <?php if (!empty($social_blocks)) : ?>
                     <div class="footer-contact-social-items">
@@ -80,7 +85,7 @@ $privacy_policy_title = get_field('privacy_policy_title', 'option');
                     </div>
 
                     <div class="footer-contact-policy-text" data-fancybox data-src="#privacy-policy">
-                        <?= $privacy_policy_title ?? ''?>
+                        <?= $privacy_policy_title ?? '' ?>
                     </div>
                 </div>
             </div>
@@ -89,7 +94,7 @@ $privacy_policy_title = get_field('privacy_policy_title', 'option');
         <?php if (!empty($privacy_policy_text)) : ?>
             <div class="privacy-policy-modal" id="privacy-policy" style="display:none;max-width:940px;">
                 <div class="privacy-policy-modal-content">
-                    <div class="privacy-policy-modal-content-title"> <?= $privacy_policy_title ?? ''?> </div>
+                    <div class="privacy-policy-modal-content-title"> <?= $privacy_policy_title ?? '' ?> </div>
                     <?= $privacy_policy_text ?> </div>
             </div>
         <?php endif; ?>

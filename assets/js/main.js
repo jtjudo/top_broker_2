@@ -21,26 +21,29 @@ $(document).ready(function () {
 
     const buttons = document.querySelectorAll('.complexes__block-btn');
 
+    function swiperInit(key) {
+        return new Swiper(`.swiper-images-${key}`, {
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            effect: 'fade',
+            speed: 500,
+
+            navigation: {
+                nextEl: `.swiper-button-next`,
+                prevEl: `.swiper-button-prev`,
+            },
+        });
+    }
+
     if (buttons !== null) {
         buttons.forEach((btn) => {
             btn.addEventListener('click', () => {
                 const key = btn.getAttribute('data-key');
-
-                new Swiper(`.swiper-images-${key}`, {
-                    loop: true,
-                    slidesPerView: 'auto',
-                    centeredSlides: true,
-                    effect: 'fade',
-                    speed: 500,
-
-                    navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
-                    },
-                });
+                swiperInit(key).init();
             })
         })
     }
+
 
     const btnQuestions = document.querySelectorAll('.questions-content-question')
 

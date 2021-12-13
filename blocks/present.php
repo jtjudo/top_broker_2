@@ -25,7 +25,7 @@ $present_text = get_field('present_text');
                 </div>
             <?php endif; ?>
             <?php if (!empty($present_btn)) : ?>
-                <button class="present__block-btn btn"><?= $present_btn ?></button>
+                <a href="javascript:;" data-fancybox="" data-src="#get-buy" class="present__block-btn btn"> <?= $present_btn ?></a>
             <?php endif; ?>
         </div>
     </div>

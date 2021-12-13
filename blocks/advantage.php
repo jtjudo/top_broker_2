@@ -19,7 +19,7 @@ $advantage_four = get_field('advantage_four');
                             <div class="text-advantage">
                                 <p><?= $advantage_one['text'] ?></p>
                             </div>
-                            <div class="btn-advantage btn"><?= $advantage_one['button'] ?></div>
+                            <a href="javascript:;" data-fancybox="" data-src="#get-buy" class="btn-advantage btn"> <?= $advantage_one['button'] ?></a>
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>

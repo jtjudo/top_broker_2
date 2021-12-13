@@ -1,6 +1,5 @@
 @import url(../fonts/Blacker_Sans_Text/stylesheet.css);
 @import url(../fonts/Gilroy/stylesheet.css);
-@import "questions.css";
 
 html,
 body,
@@ -586,12 +585,16 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 10px 10px 10px rgba(4, 0, 0, 0.6);
     border-radius: 27px;
     max-width: 584px;
     margin: 0 auto;
     cursor: pointer;
     background-image: linear-gradient(315deg, #505050 0%, #8693ab 74%);
+}
+
+.advantage-left-one {
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-form-btn:hover {
@@ -950,6 +953,22 @@ select:-webkit-autofill:focus {
 
 .pages-number:last-child {
     margin-right: 0;
+}
+
+.contact-form-btn input {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgb(0 0 0 / 50%);
+    background: transparent;
+    border: unset;
+    white-space: break-spaces;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 0;
 }
 
 .active-page {

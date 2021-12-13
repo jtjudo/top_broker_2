@@ -31,9 +31,7 @@ $investments_button = get_field('investments_button');
                 </div>
             <?php endif; ?>
             <?php if (!empty($investments_button)) : ?>
-                <a class="investments__button btn">
-                    <?= $investments_button ?>
-                </a>
+                <a href="javascript:;" data-fancybox="" data-src="#get-buy" class="investments__button btn"> <?= $investments_button ?></a>
             <?php endif; ?>
         </div>
     </div>

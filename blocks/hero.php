@@ -50,7 +50,7 @@ $hero_btn = get_field('hero_btn');
                 </svg>
             </div>
             <?php if (!empty($hero_btn)) : ?>
-                <a class="hero-btn btn"><?= $hero_btn ?></a>
+                <a href="javascript:;" data-fancybox="" data-src="#get-buy" class="hero-btn btn"> <?= $hero_btn ?></a>
             <?php endif;?>
         </div>
     </div>
